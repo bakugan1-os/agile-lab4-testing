@@ -5,7 +5,8 @@
 - `math_module.py` — приклад із методичних вказівок (факторіал, парність числа);
 - `healthyday/hydration.py` — бізнес-логіка застосунку HealthyDay: денна норма води, прогрес, «тихі години», рішення про нагадування;
 - `tests/` — юніт-тести на PyTest;
-- `.github/workflows/ci.yml` — GitHub Actions: тести на Python 3.10, 3.11, 3.12 при кожному push і pull request.
+- `.github/workflows/ci.yml` — GitHub Actions: тести на Python 3.10, 3.11, 3.12 при кожному push і pull request;
+- `Jenkinsfile` — той самий конвеєр для Jenkins (перевірка нових комітів щохвилини).
 
 Запуск локально:
 
