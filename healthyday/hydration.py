@@ -41,7 +41,9 @@ def is_quiet_time(t: time, start: time = time(22, 0), end: time = time(8, 0)) ->
     """Чи припадає момент t на «тихі години», коли нагадування не надсилаються."""
     if start == end:
         return False
-    return start <= t < end
+    if start < end:                     # інтервал у межах однієї доби, напр. 13:00–15:00
+        return start <= t < end
+    return t >= start or t < end        # інтервал через північ, напр. 22:00–08:00
 
 
 def should_remind(
